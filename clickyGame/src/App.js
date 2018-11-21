@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
+import Header from "./components/Header";
 import friends from "./friends.json";
 import "./App.css";
 
@@ -47,15 +47,18 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game</Header>
-        {this.state.friends.map(FriendCard => (
-          <Card
+        <Header score={this.state.score} highscore={this.state.highscore}>South Park Clicky Game</Header>
+        <div>
+        {this.state.friends.map(item => (
+          console.log(item),
+          <FriendCard
             clickCount={this.clickCount}
-            id={FriendCard.id}
-            key={FriendCard.id}
-            image={FriendCard.image}
+            id={item.id}
+            key={item.id}
+            image={item.image}
           />
         ))}
+        </div>
       </Wrapper>
     );
   }
