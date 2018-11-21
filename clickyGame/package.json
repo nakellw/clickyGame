@@ -15,7 +15,7 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "homepage": "https://github.io/clickyGame/"
+    "homepage": "https://github.com/nakellw/clickyGame/clickyGame"
   },
   "eslintConfig": {
     "extends": "react-app"
